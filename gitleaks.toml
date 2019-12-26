@@ -127,17 +127,13 @@ title = "gitleaks config"
 	regex = '''(?i)(api_key|apikey|secret|api|password|pw|host)=[0-9a-zA-Z-_{}]{4,120}'''
 
 [[rules]]
-	description = "Port"
-	regex = '''(?i)port(.{0,4})?[0-9]{1,10}'''
-
-[[rules]]
 	description = "Email"
 	regex = '''[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}'''
 	tags = ["email"]
 
 [[rules]]
 	description = "Generic Credential"
-	regex = '''(?i)(dbpasswd|dbuser|dbname|dbhost|api_key|apikey|secret|api|password|user|guid|hostname|pw|auth)(.{0,20})?['|"][0-9a-zA-Z-_!{}/=]{4,120}['|"]'''
+	regex = '''(?i)(dbpasswd|dbuser|dbname|dbhost|api_key|apikey|secret|api|password|guid|pw|auth)(.{0,20})?['|"][0-9a-zA-Z-_!{}/=]{4,120}['|"]'''
 	tags = ["key", "API", "generic"]
 
 [[rules]]
@@ -161,8 +157,8 @@ title = "gitleaks config"
 	]
 
 [Global]
-    file = '''(?i)(id_rsa|passwd|pgpass|pem|key|shadow)'''
+    file = '''(?i)(id_rsa|passwd|pgpass|pem|shadow)'''
 
 [whitelist]
 	description = "Custom whitelist to exclude images and gitleaks config"
-	file = '''(.*?)(jpg|gif|doc|pdf|bin)|(gitleaks.toml)$'''
+	file = '''(.*?)(jpg|gif|doc|pdf|bin)|(gitleaks.toml)|(create-database-secret.py)$'''
