@@ -155,5 +155,5 @@ title = "gitleaks config"
     file = '''(?i)(id_rsa|passwd|pgpass|pem|shadow)'''
 
 [whitelist]
-	description = "Custom whitelist to exclude images and gitleaks config"
+	description = "Custom whitelist to exclude images and gitleaks config and any other AB2D files"
 	file = '''(.*?)(jpg|gif|doc|pdf|bin)|(gitleaks.toml)|(create-database-secret.py)|(get-database-secret.py)|(TestUtil.java)|(application.bfd.properties)|(SwaggerConfig.java)$'''
