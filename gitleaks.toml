@@ -156,4 +156,4 @@ title = "gitleaks config"
 
 [whitelist]
 	description = "Custom whitelist to exclude images and gitleaks config"
-	file = '''(.*?)(jpg|gif|doc|pdf|bin)|(gitleaks.toml)|(create-database-secret.py)|(get-database-secret.py)|(TestUtil.java)|(application.bfd.properties)$'''
+	file = '''(.*?)(jpg|gif|doc|pdf|bin)|(gitleaks.toml)|(create-database-secret.py)|(get-database-secret.py)|(TestUtil.java)|(application.bfd.properties)|(SwaggerConfig.java)$'''
