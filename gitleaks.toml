@@ -124,7 +124,7 @@ title = "gitleaks config"
 
 [[rules]]
 	description = "Env Var"
-	regex = '''(?i)(api_key|apikey|secret|password|pw=[0-9a-zA-Z-_{}]{4,120})'''
+	regex = '''(?i)(api_key|apikey|secret|password|pw)=[0-9a-zA-Z-_{}]{4,120}'''
 	[[rules.whitelist]]
 	    regex = '''(PASSWORD=HHduWG6LogIvDIQuWgp3Zlo9OYMValTtH5OBcuHw)'''
 	    description = "Ignore public test okta credential, this is meant to be public"
