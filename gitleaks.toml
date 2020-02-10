@@ -149,6 +149,9 @@ title = "gitleaks config"
 	[[rules.whitelist]]
             regex = '''("bfd_keystore_location=\$BFD_KEYSTORE_LOCATION")'''
             description = "Ignore BFD keystore location entropy trigger"
+	[[rules.whitelist]]
+	    regex = '''(ABCDEFGHIJKLMNOPQRSTUVWXYabcdefghijklmnopqrstuvwxyz)'''
+	    description = "Ignore alphabet entropy trigger for health checks"
 
 [[rules]]
 	description = "Entropy plus Generic Credential"
