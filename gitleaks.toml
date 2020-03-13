@@ -152,6 +152,9 @@ title = "gitleaks config"
 	[[rules.whitelist]]
 	    regex = '''(ABCDEFGHIJKLMNOPQRSTUVWXYabcdefghijklmnopqrstuvwxyz)'''
 	    description = "Ignore alphabet entropy trigger for health checks"
+	[[rules.whitelist]]
+	    regex = '''(sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=)'''
+	    description = "Ignore valid sha integrity hash"
 
 [[rules]]
 	description = "Entropy plus Generic Credential"
