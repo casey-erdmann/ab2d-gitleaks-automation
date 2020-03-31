@@ -133,6 +133,9 @@ title = "gitleaks config"
 	description = "Generic Credential"
 	regex = '''(?i)(dbpasswd|dbuser|dbname|dbhost|api_key|apikey|secret|password|guid|pw)(.{0,20})?['|"][0-9a-zA-Z-_!{}/=]{4,120}['|"]'''
 	tags = ["key", "API", "generic"]
+	[[rules.whitelist]]
+	    regex = '''(HHduWG6LogIvDIQuWgp3Zlo9OYMValTtH5OBcuHw)'''
+	    description = "Ignore public test okta credential, this is meant to be public"
 
 [[rules]]
 	description = "WP-Config"
