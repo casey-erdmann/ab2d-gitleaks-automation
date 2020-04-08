@@ -137,7 +137,7 @@ title = "gitleaks config"
 	    regex = '''(HHduWG6LogIvDIQuWgp3Zlo9OYMValTtH5OBcuHw)'''
 	    description = "Ignore public test okta credential, this is meant to be public"
 	[[rules.whitelist]]
-	    regex = '''(input type=.*)
+	    regex = '''(input type=.*)'''
 	    description = "Ignore HTML input type values these trigger false positives on certain keywords"
 
 [[rules]]
