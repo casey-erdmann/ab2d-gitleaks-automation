@@ -138,8 +138,8 @@ title = "gitleaks config"
 	    description = "Ignore public test okta credential, this is meant to be public"
 	[[rules.whitelist]]
 	    regex = '''(input type=.*)'''
-	    description = "Ignore HTML input type values these trigger false positives on certain keywords"
-
+	    description = "Ignore input type in HTML as it flags on keywords for this rule"
+	    
 [[rules]]
 	description = "WP-Config"
 	regex='''define(.{0,20})?(DB_CHARSET|NONCE_SALT|LOGGED_IN_SALT|AUTH_SALT|NONCE_KEY|DB_HOST|DB_PASSWORD|AUTH_KEY|SECURE_AUTH_KEY|LOGGED_IN_KEY|DB_NAME|DB_USER)(.{0,20})?['|"].{10,120}['|"]'''
