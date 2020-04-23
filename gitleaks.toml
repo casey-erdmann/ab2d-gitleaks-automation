@@ -129,7 +129,7 @@ title = "gitleaks config"
 	    regex = '''(PASSWORD=HHduWG6LogIvDIQuWgp3Zlo9OYMValTtH5OBcuHw)'''
 	    description = "Ignore public test okta credential, this is meant to be public"
 	[[rules.whitelist]]
-	    regex = '''(server\.ssl\.key\-store\-password=\$\{AB2D\_KEYSTORE\_PASSWORD\:ab2dkey\})'''
+	    regex = '''(server\.ssl\.key\-store\-.*=(.*AB2D.*ab2dkey.*|PKCS12))'''
 	    description = "Local dev self signed cert, not a sensitive key, anyone can use it with the open source project."
 
 [[rules]]
