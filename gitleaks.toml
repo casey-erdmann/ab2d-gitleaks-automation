@@ -161,6 +161,9 @@ title = "gitleaks config"
 	[[rules.whitelist]]
 	    regex = '''(integrity="sha(256|384|512)-.*")'''
 	    description = "Ignore valid sha integrity hash"
+	[[rules.whitelist]]
+	    regex = '''(ab2d_keystore_location=.*)'''
+	    description = "Ignore AB2D keystore location variable"
 
 [[rules]]
 	description = "Entropy plus Generic Credential"
