@@ -131,7 +131,7 @@ title = "gitleaks config"
 
 [[rules]]
 	description = "Generic Credential"
-	regex = '''(?i)(dbpasswd|dbuser|dbname|dbhost|api_key|apikey|secret|password|guid|pw)(.{0,20})?['|"][0-9a-zA-Z-_!{}/=]{4,120}['|"]'''
+	regex = '''(?i)(dbpasswd|dbuser|dbhost|api_key|apikey|secret|password|guid|pw)(.{0,20})?['|"][0-9a-zA-Z-_!{}/=]{4,120}['|"]'''
 	tags = ["key", "API", "generic"]
 	[[rules.whitelist]]
 	    regex = '''(HHduWG6LogIvDIQuWgp3Zlo9OYMValTtH5OBcuHw)'''
@@ -164,6 +164,9 @@ title = "gitleaks config"
 	[[rules.whitelist]]
 	    regex = '''(ab2d_keystore_location=.*)'''
 	    description = "Ignore AB2D keystore location variable"
+	[[rules.whitelist]]
+	    regex = '''(.*01-public-schema.sql)'''
+	    description = "Ignore arg reference containing high entropy string to this sql file"
 
 [[rules]]
 	description = "Entropy plus Generic Credential"
