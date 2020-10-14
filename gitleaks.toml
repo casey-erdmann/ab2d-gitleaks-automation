@@ -139,6 +139,9 @@ title = "gitleaks config"
 	[[rules.whitelist]]
 	    regex = '''(input type=.*)'''
 	    description = "Ignore input type in HTML as it flags on keywords for this rule"
+	[[rules.whitelist]]
+	    regex = '''(OKTA_CLIENT_PASSWORD)'''
+	    description = "take out OKTA_CLIENT_PASSWORD as it is triggering when using env vars"
 	    
 [[rules]]
 	description = "WP-Config"
