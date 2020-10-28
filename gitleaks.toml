@@ -144,7 +144,7 @@ title = "gitleaks config"
 	    description = "take out OKTA_CLIENT_PASSWORD as it is triggering when using env vars"
 	[[rules.whitelist]]
 	    description = "Exepting example files"
-	    files = ['''(AB2D_PowerShell_Directions\.md|README\.md")''']
+	    files = ['''(AB2D_PowerShell_Directions\.md|README\.md)''']
 	    
 [[rules]]
 	description = "WP-Config"
