@@ -142,6 +142,9 @@ title = "gitleaks config"
 	[[rules.whitelist]]
 	    regex = '''(OKTA_CLIENT_PASSWORD)'''
 	    description = "take out OKTA_CLIENT_PASSWORD as it is triggering when using env vars"
+	[[rules.whitelist]]
+	    description = "Exepting example files"
+	    files = ['''(AB2D_PowerShell_Directions\.md|README\.md")''']
 	    
 [[rules]]
 	description = "WP-Config"
@@ -162,6 +165,9 @@ title = "gitleaks config"
 	    regex = '''(ABCDEFGHIJKLMNOPQRSTUVWXYabcdefghijklmnopqrstuvwxyz)'''
 	    description = "Ignore alphabet entropy trigger for health checks"
 	[[rules.whitelist]]
+	    regex = '''(MG9hMnQwbHNyZFp3NXVXUngyOTc6SEhkdVdHNkxvZ0l2RElRdVdncDNabG85T1lNVmFsVHRINU9CY3VIdw=)|(MG9hMnQwbHNyZFp3NXVXUngyOTc6SEhkdVdHNkxvZ0l2RElRdVdncDNabG85T1lNVmFsVHRINU9CY3VIdw==)'''
+	    description = "Base64 of sandbox keys, public"
+	[[rules.whitelist]]
 	    regex = '''(integrity="sha(256|384|512)-.*")'''
 	    description = "Ignore valid sha integrity hash"
 	[[rules.whitelist]]
@@ -170,10 +176,10 @@ title = "gitleaks config"
 	[[rules.whitelist]]
 	    regex = '''(.*01-public-schema.sql)'''
 	    description = "Ignore arg reference containing high entropy string to this sql file"
-	     [[rules.whitelist]]
+	[[rules.whitelist]]
       	    regex = '''(.*\$\{.*\}.*)'''
 	    description = "Ignore vars that match ${}"
-	    [[rules.whitelist]]
+	[[rules.whitelist]]
 	    regex = '''.*\${AB2D_HPMS_AUTH_KEY_SECRET}.*'''
 
 [[rules]]
