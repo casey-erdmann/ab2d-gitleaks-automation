@@ -154,17 +154,11 @@ title = "gitleaks config"
 		regexes = [
 		    '''xox[baprs]-([0-9a-zA-Z]{10,48})''',
 		    '''(?i)(.{0,20})?['"][0-9a-f]{32}-us[0-9]{1,2}['"]''',
-		    '''(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}'''
+		    '''(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}''',
+				'''(HHduWG6LogIvDIQuWgp3Zlo9OYMValTtH5OBcuHw)''',
+				'''(OKTA_CLIENT_PASSWORD)'''
 		]
-    [rules.allowlist]
-  	    regexes = '''(HHduWG6LogIvDIQuWgp3Zlo9OYMValTtH5OBcuHw)'''
-  	    description = "Ignore public test okta credential, this is meant to be public"
-  	[rules.allowlist]
-  	    regexes = '''(OKTA_CLIENT_PASSWORD)'''
-  	    description = "take out OKTA_CLIENT_PASSWORD as it is triggering when using env vars"
-  	[rules.allowlist]
-  	    description = "Exepting example files"
-  	    files = ['''(AB2D_PowerShell_Directions\.md)|(README\.md)''']
+		files = ['''(AB2D_PowerShell_Directions\.md)|(README\.md)''']
 
 
 [[rules]]
