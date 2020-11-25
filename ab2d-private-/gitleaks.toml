@@ -141,7 +141,10 @@ title = "gitleaks config"
 	tags = ["email"]
 	[rules.allowlist]
 		files = ['''(?i)bashrc''']
-		description = "ignore bashrc emails"
+		description = "ignore bashrc emails, and AB2D Standard emails"
+		regexes = [
+			'''ab2d@semanticbits.com'''
+		]
 
 
 [[rules]]
