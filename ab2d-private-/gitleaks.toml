@@ -125,6 +125,9 @@ title = "gitleaks config"
 [[rules]]
 	description = "Env Var"
 	regex = '''(?i)(apikey|secret|key|api|password|pass|pw|host)=[0-9a-zA-Z-_.{}]{4,120}'''
+	[rules.allowlist]
+			description = "ignore proddocs"
+			files = ['''(proddocs\.md)''']
 
 [[rules]]
 	description = "Port"
