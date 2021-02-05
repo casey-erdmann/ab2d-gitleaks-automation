@@ -191,4 +191,6 @@ title = "gitleaks config"
 # Global allowlist
 [allowlist]
 	description = " allowlists"
-	files = ['''((.*?)(jpg|gif|doc|pdf|bin|xsd)$)|ContributorTypeList\.java|UseList\.java)''']
+	files = ['''(ContributorTypeList\.java|UseList\.java)''']
+
+	#(.*?)(jpg|gif|doc|pdf|bin|xsd)$) This breaks things....
