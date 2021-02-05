@@ -191,4 +191,4 @@ title = "gitleaks config"
 # Global allowlist
 [allowlist]
 	description = "image allowlists"
-	files = ['''(.*?)(jpg|gif|doc|pdf|bin|xsd)$|fhir-pojos\/src\/main\/java\/gov\/cms\/ab2d\/fhir\/pojos\/*\.java''']
+	files = ['''(.*?)(jpg|gif|doc|pdf|bin|xsd)$|(.*fhir-pojos\/src\/main\/java\/gov\/cms\/ab2d\/fhir\/pojos\/*\.java)''']
