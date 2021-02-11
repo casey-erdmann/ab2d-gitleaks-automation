@@ -125,7 +125,7 @@ title = "gitleaks config"
 [[rules]]
 	description = "Env Var"
 	regex = '''(?i)(api_key|apikey|secret|password|pw)=[0-9a-zA-Z-_{}]{4,120}'''
-	[[rules.allowlist]]
+	[rules.allowlist]
 	    regex = '''(PASSWORD=HHduWG6LogIvDIQuWgp3Zlo9OYMValTtH5OBcuHw)|(DB_PASSWORD=ab2d)|(.*cloudtamer_password=None.*)'''
 	    description = "Ignore public test okta credential, this is meant to be public"
 
@@ -133,16 +133,16 @@ title = "gitleaks config"
 	description = "Generic Credential"
 	regex = '''(?i)(dbpasswd|dbuser|dbhost|api_key|apikey|secret|password|guid|pw)(.{0,20})?['|"][0-9a-zA-Z-_!{}/=]{4,120}['|"]'''
 	tags = ["key", "API", "generic"]
-	[[rules.allowlist]]
+	[rules.allowlist]
 	    regex = '''(HHduWG6LogIvDIQuWgp3Zlo9OYMValTtH5OBcuHw)'''
 	    description = "Ignore public test okta credential, this is meant to be public"
-	[[rules.allowlist]]
+	[[rules.allowlist]
 	    regex = '''(input type=.*)'''
 	    description = "Ignore input type in HTML as it flags on keywords for this rule"
-	[[rules.allowlist]]
+	[rules.allowlist]
 	    regex = '''(OKTA_CLIENT_PASSWORD)'''
 	    description = "take out OKTA_CLIENT_PASSWORD as it is triggering when using env vars"
-	[[rules.allowlist]]
+	[rules.allowlist]
 	    description = "Exepting example files"
 	    files = ['''(AB2D_PowerShell_Directions\.md)|(README\.md)''']
 
@@ -158,28 +158,28 @@ title = "gitleaks config"
 	entropies = [
         "5.0-5.6"
 	]
-	[[rules.allowlist]]
+	[rules.allowlist]
             regex = '''("bfd_keystore_location=\$BFD_KEYSTORE_LOCATION")'''
             description = "Ignore BFD keystore location entropy trigger"
-	[[rules.allowlist]]
+	[rules.allowlist]
 	    regex = '''(ABCDEFGHIJKLMNOPQRSTUVWXYabcdefghijklmnopqrstuvwxyz)'''
 	    description = "Ignore alphabet entropy trigger for health checks"
-	[[rules.allowlist]]
+	[rules.allowlist]
 	    regex = '''(MG9hMnQwbHNyZFp3NXVXUngyOTc6SEhkdVdHNkxvZ0l2RElRdVdncDNabG85T1lNVmFsVHRINU9CY3VIdw=)|(MG9hMnQwbHNyZFp3NXVXUngyOTc6SEhkdVdHNkxvZ0l2RElRdVdncDNabG85T1lNVmFsVHRINU9CY3VIdw==)'''
 	    description = "Base64 of sandbox keys, public"
-	[[rules.allowlist]]
+	[rules.allowlist]
 	    regex = '''(integrity="sha(256|384|512)-.*")'''
 	    description = "Ignore valid sha integrity hash"
-	[[rules.allowlist]]
+	[rules.allowlist]
 	    regex = '''(ab2d_keystore_location=.*)'''
 	    description = "Ignore AB2D keystore location variable"
-	[[rules.allowlist]]
+	[rules.allowlist]
 	    regex = '''(.*01-public-schema.sql)'''
 	    description = "Ignore arg reference containing high entropy string to this sql file"
-	[[rules.allowlist]]
+	[rules.allowlist]
       	    regex = '''(.*\$\{.*\}.*)'''
 	    description = "Ignore vars that match ${}"
-	[[rules.allowlist]]
+	[rules.allowlist]
 	    regex = '''.*\${AB2D_HPMS_AUTH_KEY_SECRET}.*'''
 
 [[rules]]
