@@ -156,7 +156,9 @@ title = "gitleaks config"
 		    '''(?i)(.{0,20})?['"][0-9a-f]{32}-us[0-9]{1,2}['"]''',
 		    '''(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}''',
 				'''(HHduWG6LogIvDIQuWgp3Zlo9OYMValTtH5OBcuHw)''',
-				'''(OKTA_CLIENT_PASSWORD)'''
+				'''(OKTA_CLIENT_PASSWORD)''',
+				'''(aus2r7y3gdaFMKBol297)''',
+				'''(aus2ytanytjdaF9cr297)'''
 		]
 		files = ['''(AB2D_PowerShell_Directions\.md)|(README\.md)''']
 
