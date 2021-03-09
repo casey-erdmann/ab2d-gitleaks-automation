@@ -159,7 +159,7 @@ title = "gitleaks config"
 				'''(OKTA_CLIENT_PASSWORD)''',
 				'''(aus2r7y3gdaFMKBol297)''',
 				'''(aus2ytanytjdaF9cr297)''',
-				'''(oauth2)'''
+				'''(/api/)'''
 		]
 		files = ['''(AB2D_PowerShell_Directions\.md)|(README\.md)''']
 
