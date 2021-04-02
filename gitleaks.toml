@@ -145,6 +145,9 @@ title = "gitleaks config"
 	[[rules.whitelist]]
 	    description = "Exepting example files"
 	    files = ['''(AB2D_PowerShell_Directions\.md)|(README\.md)''']
+	[[rules.whitelist]]
+			regex = '''(Whatdoesthisinstructionguidecontain)'''
+			description = "Ignore public test okta credential, this is meant to be public"
 
 [[rules]]
 	description = "WP-Config"

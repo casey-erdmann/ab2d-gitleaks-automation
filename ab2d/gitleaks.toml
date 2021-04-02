@@ -158,7 +158,8 @@ title = "gitleaks config"
 		    '''xox[baprs]-([0-9a-zA-Z]{10,48})''',
 		    '''(?i)(.{0,20})?['"][0-9a-f]{32}-us[0-9]{1,2}['"]''',
 		    '''(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}''',
-				'''(HHduWG6LogIvDIQuWgp3Zlo9OYMValTtH5OBcuHw)'''
+				'''(HHduWG6LogIvDIQuWgp3Zlo9OYMValTtH5OBcuHw)''',
+				'''(Whatdoesthisinstructionguidecontain)'''
 		]
 
 [[rules]]
