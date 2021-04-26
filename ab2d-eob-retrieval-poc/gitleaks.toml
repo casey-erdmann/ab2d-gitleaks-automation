@@ -126,7 +126,11 @@ title = "gitleaks config"
 	description = "Env Var"
 	regex = '''(?i)(apikey|secret|key|api|password|pass|pw|host)=[0-9a-zA-Z-_.{}]{4,120}'''
 	[rules.allowlist]
-		regexes = ['''(Key=event)''']
+		regexes = [
+			'''(Key=event)''',
+			'''(keystore_password)''',
+			'''(key=key_bytes)'''
+		]
 		description = "ignore Key=event "
 
 
@@ -161,7 +165,9 @@ title = "gitleaks config"
 		    '''(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}''',
 			'''(Key=event)''',
 			'''(KEYSTORE_PASSWORD)''',
-			'''(PartitionKey)'''
+			'''(PartitionKey)''',
+			'''(keystore_password)''',
+			'''(partition_key)'''
 		]
 
 [[rules]]
