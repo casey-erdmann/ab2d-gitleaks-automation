@@ -125,6 +125,10 @@ title = "gitleaks config"
 [[rules]]
 	description = "Env Var"
 	regex = '''(?i)(apikey|secret|key|api|password|pass|pw|host)=[0-9a-zA-Z-_.{}]{4,120}'''
+	[rules.allowlist]
+		regexes = [
+		'''(cms_env)'''
+		]
 
 [[rules]]
 	description = "Port"
@@ -132,7 +136,8 @@ title = "gitleaks config"
 	[rules.allowlist]
 		regexes = [
 		'''(?i)port ''',
-		'''(AB2D_DB_PORT=5432)'''
+		'''(AB2D_DB_PORT=5432)''',
+		'''(ab2d_env)'''
 		]
 		description = "ignore export "
 
