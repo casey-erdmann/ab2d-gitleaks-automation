@@ -201,7 +201,8 @@ title = "gitleaks config"
 		[rules.allowlist]
 		  description = "Whitelist KMS"
 		  regexes = [
-			  '''(kms:*)'''
+			  '''(kms:*)''',
+			  '''(kms_key_policy)'''
 		  ]
 
 # Global allowlist
