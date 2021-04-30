@@ -165,7 +165,8 @@ title = "gitleaks config"
 		    '''(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}''',
 			'''(AB2D_ANALYST_PASSWORD)''',
 			'''(KEYSTORE_PASSWORD)''',
-			'''(PartitionKey)'''
+			'''(PartitionKey)''',
+			'''(get_secret)'''
 		]
 
 [[rules]]
