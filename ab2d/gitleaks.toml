@@ -61,6 +61,14 @@ title = "gitleaks config"
 	tags = ["key", "Slack"]
 
 [[rules]]
+    description = "Asymmetric Private Key"
+    regex = '''-----BEGIN ((EC|PGP|DSA|RSA|OPENSSH) )?PRIVATE KEY( BLOCK)?-----'''
+    tags = ["key", "AsymmetricPrivateKey"]
+	[rules.allowlist]
+        description = "ignore test bfd keystore"
+        files = ['''mitm_bfd_cert.key''']
+
+[[rules]]
 	description = "EC"
 	regex = '''-----BEGIN EC PRIVATE KEY-----'''
 	tags = ["key", "EC"]
