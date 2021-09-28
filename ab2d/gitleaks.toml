@@ -86,8 +86,7 @@ title = "gitleaks config"
     tags = ["key", "AsymmetricPrivateKey"]
 	[rules.allowlist]
         description = "Ignore test bfd keystore"
-		files = ['''(mitm_bfd_cert.key)''']
-		regexes = ['''(mitm_bfd_cert.key)''']
+		files = ['''mitm_bfd_cert.key''']
 
 [[rules]]
 	description = "EC"
