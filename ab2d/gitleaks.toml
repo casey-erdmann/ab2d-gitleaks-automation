@@ -86,7 +86,7 @@ title = "gitleaks config"
 	tags = ["key", "AsymmetricPrivateKey"]
 	[rules.allowlist]
 		description = "Ignore test bfd keystore"
-		regex = ['''(mitm_bfd_cert.key)''']
+		regexes= ['''mitm_bfd_cert.key''']
 		
 
 [[rules]]
@@ -224,7 +224,7 @@ title = "gitleaks config"
 	description = "Files with keys and credentials"
     file = '''(?i)(id_rsa|passwd|id_rsa.pub|pgpass|pem|key|shadow)'''
 	[rules.allowlist]
-		files = ['''(mitm_bfd_cert.key)''']
+		files = ['''mitm_bfd_cert.key''']
 
 # Global allowlist
 [allowlist]
