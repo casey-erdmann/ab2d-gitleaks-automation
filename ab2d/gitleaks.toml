@@ -82,7 +82,7 @@ title = "gitleaks config"
 
 [[rules]]
 	description = "Asymmetric Private Key"
-	regex = '''-----BEGIN ((EC|PGP|DSA|RSA|OPENSSH|KEY) )?PRIVATE KEY( BLOCK)?-----'''
+	regex = '''-----BEGIN ((EC|PGP|DSA|RSA|OPENSSH|KEY))?PRIVATE KEY(BLOCK)?-----'''
 	tags = ["key", "AsymmetricPrivateKey"]
 	[[rules.Entropies]]
 	Min = "4.5"
