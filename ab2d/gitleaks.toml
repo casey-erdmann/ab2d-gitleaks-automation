@@ -85,8 +85,7 @@ title = "gitleaks config"
     regex = '''-----BEGIN ((EC|PGP|DSA|RSA|OPENSSH|KEY) )?PRIVATE KEY( BLOCK)?-----'''
     tags = ["key", "AsymmetricPrivateKey"]
 	[rules.allowlist]
-        description = "ignore test bfd keystore"
-        paths = ['''(bfd/src/test/resources/mitm_bfd_cert.key)''']
+        description = "Ignore test bfd keystore"
 		files = ['''(mitm_bfd_cert.key)''']
 		regexes = ['''(mitm_bfd_cert.key)''']
 
