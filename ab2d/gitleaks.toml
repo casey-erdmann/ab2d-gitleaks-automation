@@ -86,23 +86,20 @@ title = "gitleaks config"
 	tags = ["key", "AsymmetricPrivateKey"]
 	[[rules.Entropies]]
 		Min = "4.5"
-		Max = "7"
+		Max = "7.0"
 	[rules.allowlist]
 		description = "Ignore test bfd keystore"
 		regexes= ['''mitm_bfd_cert.key''']
-		
 
 [[rules]]
 	description = "EC"
 	regex = '''-----BEGIN EC PRIVATE KEY-----'''
 	tags = ["key", "EC"]
 
-
 [[rules]]
 	description = "Google API key"
 	regex = '''AIza[0-9A-Za-z\\-_]{35}'''
 	tags = ["key", "Google"]
-
 
 [[rules]]
 	description = "Heroku API key"
@@ -233,4 +230,4 @@ title = "gitleaks config"
 [allowlist]
 	description = "image allowlists"
 	files = ['''(.*?)(jpg|gif|doc|pdf|bin)|(api\/src\/test\/resources\/application\.properties)|(AB2D_PowerShell_Directions\.md)|(README\.md)|(PerformanceTestingCoverageOperations\.java)|(gitleaks.toml)|(create-database-secret.py)|(get-database-secret.py)|(TestUtil.java)|(application.bfd.properties)|(SwaggerConfig.java)|(TestRunner.java)|(mitm_bfd_cert.key)|(prod-config.yml)|(imp-config.yml)|(sbx-config.yml)|(dev-config.yml)|(local-config.yml)|(.travis.yml)|(jquery.*)|(bootstrap.*)$''']
-	regexes = ['''mitm_bfd_cert.key''']
+	regexes = ['''(mitm_bfd_cert)''']
