@@ -85,8 +85,8 @@ title = "gitleaks config"
 	regex = '''-----BEGIN ((EC|PGP|DSA|RSA|OPENSSH|KEY))?PRIVATE KEY(BLOCK)?-----'''
 	tags = ["key", "AsymmetricPrivateKey"]
 	[[rules.Entropies]]
-	Min = "4.5"
-	    Max = "4.7"
+		Min = "4.5"
+		Max = "7"
 	[rules.allowlist]
 		description = "Ignore test bfd keystore"
 		regexes= ['''mitm_bfd_cert.key''']
@@ -206,7 +206,7 @@ title = "gitleaks config"
         Max = "7.0"
     [rules.allowlist]
         description = "ignore ssh key and pems"
-        files = ['''(pem|ppk|env)$''']
+        files = ['''(pem|ppk|env|key)$''']
         paths = ['''(.*)?ssh''']
 
 [[rules]]
