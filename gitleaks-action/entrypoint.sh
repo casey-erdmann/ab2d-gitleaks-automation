@@ -14,13 +14,13 @@ echo running gitleaks "$(gitleaks --version) with the following command👇"
 if [ "$GITHUB_EVENT_NAME" = "push" ]
 then
   echo ${GITHUB_SHA}
-  echo gitleaks --path=$GITHUB_WORKSPACE --verbose --redact --commit=${GITHUB_SHA} $CONFIG
-  CAPTURE_OUTPUT=$(gitleaks --path=$GITHUB_WORKSPACE --verbose --redact --commit=${GITHUB_SHA} $CONFIG)
+  echo gitleaks --path=$GITHUB_WORKSPACE --verbose --redact --format=sarif --commit=${GITHUB_SHA} $CONFIG
+  CAPTURE_OUTPUT=$(gitleaks --path=$GITHUB_WORKSPACE --verbose --redact --format=sarif --commit=${GITHUB_SHA} $CONFIG)
 elif [ "$GITHUB_EVENT_NAME" = "pull_request" ]
 then 
   echo ${GITHUB_SHA}
-  echo gitleaks --path=$GITHUB_WORKSPACE --verbose --redact --commit=${GITHUB_SHA} $CONFIG
-  CAPTURE_OUTPUT=$(gitleaks --path=$GITHUB_WORKSPACE --verbose --redact --commit=${GITHUB_SHA} $CONFIG)
+  echo gitleaks --path=$GITHUB_WORKSPACE --verbose --redact --format=sarif --commit=${GITHUB_SHA} $CONFIG
+  CAPTURE_OUTPUT=$(gitleaks --path=$GITHUB_WORKSPACE --verbose --redact --format=sarif --commit=${GITHUB_SHA} $CONFIG)
 fi
 
 if [ $? -eq 1 ]
